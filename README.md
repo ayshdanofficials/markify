@@ -10,9 +10,9 @@ Built using Electron, HTML5/CSS3, and localized high-performance FFmpeg/FFprobe 
 
 Get the latest stable production release of Markify Pro for Windows 10/11:
 
-*   **💾 [Download Windows Installer Setup (v1.0.0)](https://github.com/ayshdan/markify/releases/download/v1.0.0/Markify-Setup-1.0.0.exe)**  
+*   **💾 [Download Windows Installer Setup (v1.0.0)]([https://github.com/ayshdan/markify/releases/download/v1.0.0/Markify-Setup-1.0.0.exe](https://github.com/ayshdanofficials/markify/releases/download/v1.0.0/Markify.Setup.1.0.0.exe))**  
     *Recommended for standard installation. Creates a desktop shortcut and registers the app under system programs.*
-*   **⚡ [Download Windows Portable Zip (v1.0.0)](https://github.com/ayshdan/markify/releases/download/v1.0.0/Markify-Portable.zip)**  
+*   **⚡ [Download Windows Portable Zip (v1.0.0)]([https://github.com/ayshdan/markify/releases/download/v1.0.0/Markify-Portable.zip](https://github.com/ayshdanofficials/markify/releases/download/v1.0.0/Markify-Portable.zip))**  
     *Standalone portable version. No installation required; unzip and run `Markify.exe` instantly from any folder or USB drive.*
 
 ---
