@@ -28,8 +28,7 @@ Official pre-compiled production binaries for Windows 10 and 11:
 *   **Local Processing & Privacy**: Zero server dependency, external API requests, or background updates. All rendering operations are executed locally using embedded FFmpeg tools.
 
 ---
-https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/blob/main/Screenshot%202026-06-23%20042325.png
-## User Workflow Guide
+![Markify Pro Screenshot](https://raw.githubusercontent.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/main/Screenshot%202026-06-23%20042325.png)
 
 1.  **Configure Directories**:
     *   Click **Browse** in the logo configuration panel to select your watermark file (PNG, JPG, or WEBP files supported; transparent PNG files recommended).
