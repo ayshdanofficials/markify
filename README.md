@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="(https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/blob/main/default_watermark.png)" alt="Markify Logo" width="140"/>
+<img src="https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/blob/main/default_watermark.png?raw=true" alt="Markify Logo" width="140"/>
 
 # Markify
 
