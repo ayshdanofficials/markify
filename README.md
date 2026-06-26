@@ -1,119 +1,162 @@
-# Markify Pro — Desktop Bulk Video Watermarker
+# Markify — Bulk Video Watermarker
 
-Markify Pro is an offline desktop application designed for batch video watermarking. It is optimized for content creators, video editors, and social media managers who need to process large volumes of video files quickly and securely. The software automatically detects video orientation, separating portrait (Reels, TikTok, YouTube Shorts - 9:16) and landscape (Widescreen - 16:9) formats, applying distinct watermark configuration presets to each in parallel.
+<p align="center">
+  <img src="logos/logo.png" alt="Markify Logo" width="120">
+</p>
 
-Built using Electron, HTML5/CSS3, and embedded FFmpeg/FFprobe binaries, Markify Pro runs entirely on your local machine, ensuring absolute data privacy and offline capability.
+<p align="center">
+  <b>Professional bulk video watermarking tool for content creators, agencies, and businesses.</b><br>
+  Auto-detects Reel (Vertical) and Landscape (Horizontal) videos. Independent watermark controls for each orientation.
+</p>
 
----
-
-## Downloads
-
-Official pre-compiled production binaries for Windows 10 and 11:
-
-| Distribution Type | Description | Download Link |
-| :--- | :--- | :--- |
-| **Windows Installer Setup** | Standard system installer. Configures desktop shortcuts and registers the application within Windows programs. | [Download Markify Setup v1.0.0](https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/releases/download/v1.0.0/Markify.Setup.1.0.0.exe) |
-| **Windows Portable Archive** | Standalone portable release. Requires no installation. Extract the ZIP and execute `Markify.exe` instantly. | [Download Markify Portable ZIP](https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/releases/download/v1.0.0/Markify-Portable.zip) |
-
----
-
-## Core Capabilities
-
-*   **Parallel Batch Processing**: Import multiple video files simultaneously to process and watermark them in a single batch operation.
-*   **Automatic Layout Detection**: Automatically groups imported media into Portrait (Reels) or Landscape classes and applies independent parameters (dimensions, padding offsets, opacity, and rotation angles) to each class.
-*   **Dynamic Video Cropping**: Fully integrated manual cropping interface with aspect ratio locking features (1:1 Square, 9:16 Vertical, 16:9 Landscape).
-*   **Interactive Watermark Overlay**: Drag-and-drop watermark placement on the live preview player, or snap to any of the 9 standard grid anchor points.
-*   **Integrated Media Player**: Real-time video player with a scrubbable timeline, play/pause controls, volume sliders, and mute options.
-*   **Monochromatic Theme Engine**: High-fidelity Dark Charcoal and Clean Light themes that conform to modern OS interface design guidelines.
-*   **Local Processing & Privacy**: Zero server dependency, external API requests, or background updates. All rendering operations are executed locally using embedded FFmpeg tools.
-
----
-![Markify Pro Screenshot](https://raw.githubusercontent.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/main/Screenshot%202026-06-23%20042325.png)
-
-1.  **Configure Directories**:
-    *   Click **Browse** in the logo configuration panel to select your watermark file (PNG, JPG, or WEBP files supported; transparent PNG files recommended).
-    *   Define the output folder path where processed videos will be saved.
-2.  **Import Files**:
-    *   Drag and drop target video files into the dashed dropzone area, or click to browse files locally.
-    *   Videos will appear in the queue list, displaying index numbering, filename, duration, resolution, layout category, and status indicators.
-3.  **Adjust Watermark Properties**:
-    *   Select any video in the list to load it into the preview player.
-    *   Use the sidebar panels to adjust size, offset margin, opacity, and rotation settings.
-    *   If cropping is required, check the **Crop Video** checkbox and define boundaries manually on-screen or select a preset from the crop dropdown menu.
-4.  **Manage Queue List**:
-    *   Check individual checkboxes to select specific items, or toggle the top checkbox to select the entire list.
-    *   Use **Delete Selected** to remove targeted files from the queue, or **Clear All** to clear the list.
-5.  **Export and Process**:
-    *   To export a single video individually, click the **Export (Save)** icon on its row.
-    *   To process the entire queue sequentially, click **Start Watermarking** at the bottom of the sidebar.
-    *   Monitor status logs and progress bars. The target output folder will open automatically once processing is complete.
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.1.0-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square&logo=windows" alt="Platform">
+  <img src="https://img.shields.io/badge/electron-31.x-47848F?style=flat-square&logo=electron" alt="Electron">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+</p>
 
 ---
 
-## Keyboard Shortcuts
+## ✨ Features
 
-Manage the live preview player using the following key bindings:
+| Feature | Description |
+|---------|-------------|
+| **Bulk Processing** | Add unlimited videos and watermark them all in one click |
+| **Auto Orientation Detection** | Automatically detects Reel (9:16) vs Landscape (16:9) videos |
+| **Independent Watermark Settings** | Separate size, position, opacity, rotation for each orientation |
+| **Live Preview** | Real-time interactive watermark preview with draggable positioning |
+| **5-Point Position Grid** | Quick-select watermark position: corners + center |
+| **Custom Drag Positioning** | Drag the watermark anywhere on the preview for precise placement |
+| **Adjustable Opacity** | Control watermark transparency from 10% to 100% |
+| **Rotation Control** | Rotate watermark from -180° to +180° |
+| **Video Cropping** | Built-in crop tool with preset aspect ratios (1:1, 9:16, 16:9) or custom |
+| **Output Resolution Scaling** | Scale output to 720p, 1080p, 2K, or 4K |
+| **Dark / Light Theme** | Full theme support with persistent preference |
+| **Keyboard Shortcuts** | Play/Pause, Seek, Volume, Mute — all via keyboard |
+| **Settings Persistence** | All settings saved locally and restored on next launch |
+| **Custom Video Player** | Built-in player with timeline, volume, and mute controls |
 
-| Key | Action |
-| :--- | :--- |
-| `Spacebar` | Play / Pause video playback |
-| `M` | Mute / Unmute player audio |
-| `Left Arrow` | Seek backward by 5 seconds |
-| `Right Arrow` | Seek forward by 5 seconds |
-| `Up Arrow` | Increase player volume by 10% |
-| `Down Arrow` | Decrease player volume by 10% |
+## 📦 Installation
 
----
+### Option 1: Download Installer (Recommended)
+1. Go to [Releases](../../releases)
+2. Download the latest `.exe` installer
+3. Run the installer and follow the setup wizard
 
-## Local Development & Compilation
+### Option 2: Download Portable
+1. Go to [Releases](../../releases)
+2. Download the portable `.exe` file
+3. Run directly — no installation needed
 
-### Prerequisites
-*   Node.js (version 18 or above recommended)
-*   Windows 10 / 11
-
-### Installation Steps
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker.git
-    cd Markify-Desktop-Bulk-Video-Watermarker
-    ```
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Launch the application in development mode:
-    ```bash
-    npm start
-    ```
-
-### Packaging Binaries
-To build the setup installer and the portable executable:
+### Option 3: Build from Source
 ```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/markify.git
+cd markify
+
+# Install dependencies
+npm install
+
+# Run in development mode
+npm start
+
+# Build installer for Windows
 npm run package
 ```
-Compiled targets will be generated inside the `dist/` directory.
 
----
+## 🚀 How to Use
 
-## Support & Contacts
+1. **Set Logo**: Click "Browse" in the Logo section to select your watermark image (PNG, JPG, WEBP)
+2. **Set Output Folder**: Choose where watermarked videos will be saved
+3. **Add Videos**: Drag & drop videos or click the dropzone to browse (MP4, MOV, AVI, MKV, WEBM)
+4. **Configure Watermark**: Adjust size, offset, opacity, rotation, and position for Reel and Landscape independently
+5. **Preview**: Click any video in the queue to see a live watermark preview — drag the watermark to reposition
+6. **Process**: Click "Apply Watermark in Bulk" to process all videos, or use the export button for individual files
 
-For licenses, enterprise customizations, or technical assistance:
+## ⌨️ Keyboard Shortcuts
 
-| Channel | Contact Reference |
-| :--- | :--- |
-| **Website** | [www.ayshdan.com](http://www.ayshdan.com) |
-| **Email** | [info.ayshdan@gmail.com](mailto:info.ayshdan@gmail.com) |
-| **WhatsApp Support (Pakistan)** | [+92 347 7876648](https://wa.me/923477876648) |
-| **WhatsApp Community** | [Markify Community Channel](https://whatsapp.com/channel/0029Vb0YTwj5q08e1my4tK1i) |
+| Key | Action |
+|-----|--------|
+| `Space` | Play / Pause video |
+| `← Left Arrow` | Seek backward 5 seconds |
+| `→ Right Arrow` | Seek forward 5 seconds |
+| `↑ Up Arrow` | Volume up |
+| `↓ Down Arrow` | Volume down |
+| `M` | Mute / Unmute |
 
----
+## 🛠️ Tech Stack
 
-## License
+- **Electron** v31 — Cross-platform desktop framework
+- **FFmpeg** — Industry-standard video processing engine (bundled via `@ffmpeg-installer/ffmpeg`)
+- **FFprobe** — Video metadata detection (bundled via `@ffprobe-installer/ffprobe`)
+- **Fluent-FFmpeg** — Node.js FFmpeg API wrapper
+- **Vanilla HTML/CSS/JS** — Zero frontend framework overhead
 
-This software is released under the **MIT License**. Copyright (c) 2026 Ayshdan (Markify Pakistan).
+## 📁 Project Structure
 
-```text
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 ```
+markify/
+├── main.js                 # Electron main process (IPC, FFmpeg, window management)
+├── preload.js              # Secure context bridge between main and renderer
+├── package.json            # Project metadata, dependencies, and build config
+├── default_watermark.png   # Default bundled watermark image
+├── build/
+│   ├── icon.png            # Application icon
+│   └── installer.nsh       # NSIS installer customization script
+├── logos/
+│   └── logo.png            # Brand logo asset
+├── src/
+│   ├── index.html          # Application UI layout
+│   ├── renderer.js         # Renderer process logic (queue, preview, settings)
+│   ├── style.css           # Complete application styling (dark + light themes)
+│   ├── logo-white.png      # Header logo for dark theme
+│   └── logo-black.png      # Header logo for light theme
+└── dist/                   # Build output (generated, git-ignored)
+```
+
+## 🐛 Bug Fixes — v1.1.0
+
+### Fixed: Watermark not showing on Horizontal (Landscape) videos
+- **Root Cause**: The video preview used `object-fit: cover` which clipped landscape videos, causing the watermark positioning math to break. The coordinate system assumed the rendered video filled the entire wrapper, but with landscape videos the aspect ratio mismatch caused the watermark to render outside the visible area.
+- **Fix**: Changed to `object-fit: contain` and rewrote the watermark positioning engine to compute the actual rendered video rectangle within the wrapper (accounting for letterboxing/pillarboxing). All coordinate calculations — watermark position, crop box overlay, drag bounds — now correctly offset for both vertical and horizontal video orientations.
+- **Files Changed**: `src/style.css`, `src/renderer.js`
+
+## 📋 Changelog
+
+### v1.1.0 (2026-06-26)
+- 🐛 **Fixed** watermark not displaying on horizontal/landscape videos
+- 🐛 **Fixed** crop box overlay misalignment on landscape videos
+- 🐛 **Fixed** watermark drag positioning on landscape videos
+- ♻️ Rewrote video render area calculation to properly handle `object-fit: contain`
+- 📝 Updated README with complete documentation
+
+### v1.0.0 (2026-06-22)
+- 🎉 Initial release
+- ✅ Bulk video watermarking with FFmpeg
+- ✅ Auto orientation detection (Reel vs Landscape)
+- ✅ Independent watermark settings per orientation
+- ✅ Live interactive watermark preview with drag positioning
+- ✅ Video cropping with aspect ratio presets
+- ✅ Output resolution scaling (720p, 1080p, 2K, 4K)
+- ✅ Dark and Light theme support
+- ✅ Keyboard shortcuts for video player
+- ✅ Persistent settings storage
+- ✅ Windows installer (NSIS) and portable builds
+
+## 👨‍💻 Author
+
+**AYSHDAN Innovations**
+- 🌐 Website: [www.ayshdan.com](http://www.ayshdan.com)
+- 📧 Email: info.ayshdan@gmail.com
+- 📱 WhatsApp: +92 347 7876648
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  <sub>Copyright © 2026 Markify Pakistan. All rights reserved.</sub>
+</p>

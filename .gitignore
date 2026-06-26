@@ -9,6 +9,7 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
+._*
 
 # Temporary log files
 *.log
@@ -16,8 +17,24 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local settings database
+# Local settings database (user-specific runtime settings)
 settings.json
 
 # Local temp media storage
 .tempmediaStorage/
+
+# Scratch / temporary dev files
+scratch/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Zip archives
+*.zip
+
+# Gemini AI agent data
+.gemini/

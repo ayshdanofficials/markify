@@ -1,6 +1,6 @@
 {
   "name": "bulk-video-watermarker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Bulk video watermarker for Reel and Landscape videos with auto-detection.",
   "main": "main.js",
   "scripts": {
@@ -29,6 +29,19 @@
     "appId": "com.markify.watermarker",
     "productName": "Markify",
     "copyright": "Copyright © 2026 Markify Pakistan. All rights reserved.",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "default_watermark.png",
+      "node_modules/**/*",
+      "!node_modules/@ffmpeg-installer/linux*/**",
+      "!node_modules/@ffmpeg-installer/darwin*/**",
+      "!node_modules/@ffmpeg-installer/win32-ia32/**",
+      "!node_modules/@ffprobe-installer/linux*/**",
+      "!node_modules/@ffprobe-installer/darwin*/**",
+      "!node_modules/@ffprobe-installer/win32-ia32/**"
+    ],
     "directories": {
       "output": "dist"
     },
