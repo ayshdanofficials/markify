@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/main/logos/logo.png" alt="Markify Logo" width="140"/>
+<img src="(https://github.com/ayshdanofficials/Markify-Desktop-Bulk-Video-Watermarker/blob/main/default_watermark.png)" alt="Markify Logo" width="140"/>
 
 # Markify
 
@@ -195,7 +195,7 @@ markify/
 
 <div align="center">
 
-**AYSHDAN Innovations**
+**Ayshdan Innovations**
 
 [![Website](https://img.shields.io/badge/Website-ayshdan.com-6C63FF?style=for-the-badge&logo=google-chrome&logoColor=white)](http://www.ayshdan.com)
 [![Email](https://img.shields.io/badge/Email-info.ayshdan@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info.ayshdan@gmail.com)
