@@ -5,7 +5,6 @@ const ffmpegInstaller = require('@ffmpeg-installer/ffmpeg');
 const ffprobeInstaller = require('@ffprobe-installer/ffprobe');
 const ffmpeg = require('fluent-ffmpeg');
 
-// Set ffmpeg and ffprobe paths, mapping to app.asar.unpacked when packaged
 let ffmpegPath = ffmpegInstaller.path;
 let ffprobePath = ffprobeInstaller.path;
 
@@ -78,7 +77,6 @@ ipcMain.on('window-close', () => {
   if (mainWindow) mainWindow.close();
 });
 
-// 1. Select files
 ipcMain.handle('select-files', async (event, options) => {
   const result = await dialog.showOpenDialog(mainWindow, {
     properties: ['openFile', 'multiSelections'],
@@ -90,7 +88,6 @@ ipcMain.handle('select-files', async (event, options) => {
   return result.filePaths;
 });
 
-// 2. Select logo file
 ipcMain.handle('select-logo', async (event) => {
   const result = await dialog.showOpenDialog(mainWindow, {
     properties: ['openFile'],
@@ -101,7 +98,6 @@ ipcMain.handle('select-logo', async (event) => {
   return result.filePaths[0] || null;
 });
 
-// 3. Select output folder
 ipcMain.handle('select-output-folder', async (event) => {
   const result = await dialog.showOpenDialog(mainWindow, {
     properties: ['openDirectory']
@@ -109,7 +105,6 @@ ipcMain.handle('select-output-folder', async (event) => {
   return result.filePaths[0] || null;
 });
 
-// 4. Load settings
 ipcMain.handle('load-settings', () => {
   try {
     if (fs.existsSync(settingsPath)) {
@@ -154,7 +149,6 @@ ipcMain.handle('load-settings', () => {
   };
 });
 
-// 5. Save settings
 ipcMain.handle('save-settings', (event, settings) => {
   try {
     fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8');
@@ -165,7 +159,6 @@ ipcMain.handle('save-settings', (event, settings) => {
   }
 });
 
-// 6. Get video details (to show aspect ratio, dimensions, orientation)
 ipcMain.handle('get-video-details', async (event, filePath) => {
   return new Promise((resolve) => {
     ffmpeg.ffprobe(filePath, (err, metadata) => {
@@ -209,7 +202,6 @@ ipcMain.handle('get-video-details', async (event, filePath) => {
   });
 });
 
-// 7. Cancel active processing
 ipcMain.handle('cancel-processing', () => {
   if (activeFfmpegCommand) {
     activeFfmpegCommand.kill('SIGKILL');
@@ -219,7 +211,6 @@ ipcMain.handle('cancel-processing', () => {
   return { success: false, error: 'No active process' };
 });
 
-// 8. Process video
 ipcMain.handle('process-video', async (event, { filePath, settings, videoType }) => {
   return new Promise((resolve) => {
     const logoPath = settings.logoPath;
@@ -431,7 +422,6 @@ ipcMain.handle('process-video', async (event, { filePath, settings, videoType })
   });
 });
 
-// 9. Open output folder in Explorer
 ipcMain.handle('open-folder', async (event, folderPath) => {
   if (fs.existsSync(folderPath)) {
     shell.openPath(folderPath);
@@ -440,7 +430,6 @@ ipcMain.handle('open-folder', async (event, folderPath) => {
   return { success: false, error: 'Folder does not exist' };
 });
 
-// 10. Open external URL in browser
 ipcMain.handle('open-external', async (event, url) => {
   try {
     await shell.openExternal(url);
